@@ -4,9 +4,9 @@ author: AGS
 title:  "An overview of SAN protocols"
 date:   2016-09-06 06:00:00
 categories: main
+image: /assets/css/images/blog/san.jpg
 description: "FCOE, iSCSI, SMB, NFS, which san protocol ?"
 ---
-# An overview of SAN protocols
 ## Abstract
 Since the advent of iSCSI, chosing a block-storage transport protocol is a recurring debate.<!--break--> With the growing integration of cloud storage and hybrid storage, and the increasing performance of LAN ethernet, Software Defined Storage Protocol are more and more relevant as an alternative to hardware solutions based on Fiber Channel and its derivative.
 ## Quel protocole de transport pour le SAN ? FC, FCoE, iSCSI, SMBv3 ou NFSv4 ?

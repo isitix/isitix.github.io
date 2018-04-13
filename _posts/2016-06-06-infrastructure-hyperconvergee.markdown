@@ -3,6 +3,7 @@ layout: default
 author: AGS
 title:  Infrastructure hyperconvergée
 date:   2016-06-06 06:00:00
+image: /assets/css/images/blog/hyperconverged.jpg
 categories: main
 description: "Elements concernant les infrastructures hyperconvergées"
 ---
