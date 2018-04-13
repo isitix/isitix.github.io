@@ -1,37 +1,11 @@
-## Welcome to GitHub Pages
+# blog.isitix.com
+Ce site est le blog de l'équipe [ISITIX](http://www.isitix.com)
 
-You can use the [editor on GitHub](https://github.com/isitix/isitix.github.io/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+# Licences
+Le code source du site est distribué sous licence GNU GPL V3.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+Le texte du site est distribué sous licence [Creative Commons Attribution 3.0](https://creativecommons.org/licenses/by/3.0/). 
 
-### Markdown
+Les images diffusées sur ce site sont la propriété exclusive de leurs auteurs. Elles ne peuvent être diffuser sans leur accord écrit préalable.
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
-
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/isitix/isitix.github.io/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+La marque ISITIX et ses dérivés sont la propriété exclusive de la société ISITIX et ne peuvent être utilisés sans l'accord écrit préalable d'ISITIX.

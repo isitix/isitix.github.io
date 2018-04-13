@@ -1,1 +1,14 @@
-theme: jekyll-theme-cayman
+timezone: Europe/Paris
+lang: fr-FR
+google_analytics: 'FILL_IN'
+title: Blog ISITIX
+markdown: kramdown
+paginate: 10
+show_drafts: false
+paginate_path: "/blog/page:num"
+excerpt_separator: <!--break-->
+url: "http://blog.isitix.com"
+plugins:
+  - jekyll-sitemap
+sass:
+  style: compressed

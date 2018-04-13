@@ -1,0 +1,107 @@
+---
+
+---
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-size: 1.2rem;
+    font-family: 'Arvo', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background: black;   
+    color: white; 
+}
+a, a:visited { 
+    text-decoration: underline;
+    color: rgb(233, 92, 77);
+}
+#header {
+    background-image: url("/assets/css/images/bandeau.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;    
+}
+.banner {
+    text-align: center;   
+    color: white;
+    h1 {
+        font-size: 6rem;
+        text-transform: uppercase; 
+    }
+    h2,h3 {
+        padding: 1rem;
+        text-transform: uppercase; 
+        font-weight: normal;
+        text-transform: none;
+    }
+    h2{
+        font-size: 2rem;
+    }
+    h3 {
+        font-size: 1.5rem;
+    }
+    a {
+        color: white;
+        &:visited {
+            color: white;
+        }
+    }
+}
+
+#contact {
+    font-size: 1.2rem;
+    text-transform: none;
+    text-align: left;
+    ul{
+        li {
+            line-height: 2rem;
+        }
+    }
+}
+
+
+#logo, #logo a, #logo a:visited {
+    color: rgb(233, 92, 77);
+    font-weight: 700;
+    letter-spacing: 0.4rem;
+    text-decoration-color: rgb(233, 92, 77);
+    text-decoration-style: solid;
+    text-shadow: rgba(0, 0, 0, 0.1) 2.6px 3.9px 0px;
+    text-decoration-line: none;
+}
+.blogpost {
+    font-size: 1.4em;
+    color: black;
+    background-color: white;
+    padding: 2em;
+    margin: 0;
+}
+.blogindex {
+    font-size: 1.2em;
+    padding: 1em;
+    margin: 1em;
+    background-color: #222;
+}
+button {
+    background-color: rgb(233, 92, 77);
+    border: none;
+    color: white;
+    padding: 1em;
+    margin: 1em;
+    border-radius: 12px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1.5em;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+p {
+    padding: 0.51rem;
+    }
+ul {
+    margin: 2rem;
+}
+li {
+    margin-top: 1em;
+}
