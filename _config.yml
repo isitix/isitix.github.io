@@ -1,6 +1,6 @@
 timezone: Europe/Paris
 lang: fr-FR
-google_analytics: 'FILL_IN'
+google_analytics: 'UA-74142838-3'
 title: Blog ISITIX
 markdown: kramdown
 paginate: 10
