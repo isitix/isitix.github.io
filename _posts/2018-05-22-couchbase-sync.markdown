@@ -9,7 +9,7 @@ description: "Complexité de synchronisation de documents Couchbase Mobile 1.4 :
 ---
 # La synchronisation des documents dans Couchbase V1.4 et son évolution en V1.5
 ## Introduction
-Ce document cite et réordonne des informations présentées sur le site [Couchbase](https://developer.couchbase.com/). Il apporte une vue synthétique sur les mécanismes de synchronisation de Couchbase Mobile et permet de mieux comprendre certains comportements inattendus qui peuvent surprendre le développeur d'applications mobiles s'appuyant sur Couchbase Sync Gateway.
+Ce document cite et réordonne des informations présentées sur le site [Couchbase](https://developer.couchbase.com/). Il apporte une vue synthétique sur les mécanismes de synchronisation de Couchbase Mobile et permet de mieux comprendre certains comportements inattendus qui peuvent surprendre le développeur d'applications mobiles s'appuyant sur Couchbase Sync Gateway.<!--break-->
 
 ## Champs spécifiques à la gestion des révisions 
 Les documents comportent des champs précédés par un \"\_\". Ces champs sont des champs techniques réservés pour le bon fonctionnement de la SyncGateway. Ces champs sont utilisés pour gérer les révisions et construire l'arbre de révision : 
