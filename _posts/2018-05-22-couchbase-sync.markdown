@@ -7,9 +7,11 @@ image: /assets/css/images/blog/couchbasesync.jpg
 categories: main
 description: "Complexité de synchronisation de documents Couchbase Mobile 1.4 : pourquoi upgrader vers la V1.5?"
 ---
-# La synchronisation des documents dans Couchbase V1.4 et son évolution en V1.5
+# La synchronisation des documents Couchbase Mobile avec la Sync Gateway V1.4 et son évolution en V1.5
 ## Introduction
-Ce document cite et réordonne des informations présentées sur le site [Couchbase](https://developer.couchbase.com/). Il apporte une vue synthétique sur les mécanismes de synchronisation de Couchbase Mobile et permet de mieux comprendre certains comportements inattendus qui peuvent surprendre le développeur d'applications mobiles s'appuyant sur Couchbase Sync Gateway.<!--break-->
+La synchronisation des données d'une base Couchbase Mobile vers une base Couchbase centrale est un mécanisme simple à mettre en place, au moyen de la sync gateway, mais complexe à appréhendre du fait des mécanismes sous-jacents et de leur implantation dans l'architecture Couchbase.
+
+Ce document cite et réordonne des informations présentées sur le site [Couchbase](https://developer.couchbase.com/). Il apporte une vue synthétique sur les mécanismes de synchronisation de Couchbase Mobile et permet de mieux comprendre certains comportements inattendus qui peuvent surprendre le développeur d'applications mobiles s'appuyant sur Couchbase Sync Gateway, des champs ajoutés, la présence apparente de doublons dans les bases, etc...<!--break-->
 
 ## Champs spécifiques à la gestion des révisions 
 Les documents comportent des champs précédés par un \"\_\". Ces champs sont des champs techniques réservés pour le bon fonctionnement de la SyncGateway. Ces champs sont utilisés pour gérer les révisions et construire l'arbre de révision : 
@@ -65,17 +67,15 @@ Les deux autres mécanismes suppriment les données qui ne sont plus utiles à l
 
 Le fonctionnement de la synchronisation est détaillé dans les documents suivants :
 
-- https://developer.couchbase.com/documentation/mobile/1.4/guides/couchbase-lite/native-api/revision/index.html
-- https://developer.couchbase.com/documentation/mobile/1.4/training/develop/adding-synchronization/index.html#resolve-conflicts 
-- https://blog.couchbase.com/conflict-resolution-couchbase-mobile/ 
-
-
+- [API Couchbase-lite](https://developer.couchbase.com/documentation/mobile/1.4/guides/couchbase-lite/native-api/revision/index.html)
+- [Résolution de conflits dans Couchabase mobile](https://developer.couchbase.com/documentation/mobile/1.4/training/develop/adding-synchronization/index.html#resolve-conflicts )
+- [Billet blog sur la résolution de conflits](https://blog.couchbase.com/conflict-resolution-couchbase-mobile/)
 
 ## Accès aux documents
 Le bucket sur le serveur couchbase, rattaché à l'application mobile via la syn_gateway, comporte donc à la fois des données métier liées à l'application et des données techniques (champs précédés d'un \_ ) liés à la gestion de la synchronisation des données. Jusqu'à la version 1.4 incluse de la sync gateway, il est déconseillé d'accéder directement au bucket central et il est recommandé d'y accéder via l'un des deux mécanismes suivants :
 
-- En REST sur la Sync_Gateway : la sync gateway fournit une API REST qui permet de consulter les données du bucket central. Les spécifications de cet API sont disponibles ici : https://developer.couchbase.com/documentation/mobile/1.4/references/sync-gateway/index.html
-- En passant par la base couchbase lite locale, et en écrivant et en lisant les données depuis le client mobile : https://developer.couchbase.com/documentation/mobile/1.4/references/couchbase-lite/index.html
+- En REST sur la Sync_Gateway : la sync gateway fournit une API REST qui permet de consulter les données du bucket central. Les spécifications de cet API sont disponibles [ici](https://developer.couchbase.com/documentation/mobile/1.4/references/sync-gateway/index.html).
+- En passant par la base couchbase lite locale, et en écrivant et en lisant les données depuis le client mobile  selon [la méthode décrite ici](https://developer.couchbase.com/documentation/mobile/1.4/references/couchbase-lite/index.html)
 
 Par la première méthode, on accède aux données en central indépendamment des éventuelles modifications en cours sur les clients mobiles travaillant éventuellement en mode déconnecté au moment de la lecture / écriture des données centrales.
 
@@ -104,7 +104,7 @@ Deux solutions sont possibles pour faire appel à ce mécanisme :
 - Utiliser la méthode ExpireAfter pour définir un temps minimum au-delà le document est expiré et sera supprimé de la base locale
 - Utiliser la méthode Purge pour supprimer un document de la base locale
 
-Dans les deux cas, le document est maintenu en central avec un numéro de révision, etc... comme le stipule clairement la documentation https://github.com/couchbase/couchbase-lite-ios/wiki/Document-Expiration :
+Dans les deux cas, le document est maintenu en central avec un numéro de révision, etc... comme le stipule clairement [la documentation Couchbase Lite](https://github.com/couchbase/couchbase-lite-ios/wiki/Document-Expiration) :
 
 > Note: As with the existing explicit purge mechanism, this applies only to the local database; it has nothing to do with replication. The expiration time is not propagated when the document is replicated. The purge of the document does not cause it to be deleted on any other database. If the document is later updated on a remote database that the local database pulls from, the new revision will be pulled and the document will reappear.
 
@@ -113,9 +113,9 @@ Une fois le document expiré en local et supprimé, si l'on souhaite recréer un
 
 On construit un nouveau document avec le même ID mais un numéro de révision à 0 qui rentre en conflit avec le document existant en central lors de la prochaine synchronisation. Si la résolution de conflit n'est pas prévu au niveau de l'application, le conflit est alors résolu en appliquant la stratégie de résolution par défaut.
 
-Cette stratégie par défaut est expliquée dans ce document : https://blog.couchbase.com/conflict-resolution-couchbase-mobile/ 
+Cette stratégie par défaut est expliquée dans [ce document](https://blog.couchbase.com/conflict-resolution-couchbase-mobile/)
 
-Enfin, le problème de la gestion des documents purgés est mentionné ici : https://stackoverflow.com/questions/34405150/purging-documents-in-couchbase-lite
+Enfin, le problème de la gestion des documents purgés est mentionné [ici](https://stackoverflow.com/questions/34405150/purging-documents-in-couchbase-lite).
 
 # Les apports de la version 1.5 de la sync gateway
 La complexité et les restrictions liées au shadow bucket, le mélange des données de synchronisation et des données techniques, et l'impossibilité d'écrire directement sur la base centrale sans passer par l'API REST de la Sync_Gateway sont des contraintes lourdes de Couchbase de Couchbase Mobile dans les version < 1.5.
@@ -125,7 +125,7 @@ La version 1.5 apporte des modifications significatives sur ces points et notamm
 - Possibilité d'écrire directement dans le bucket central
 - Meilleure séparation des données de synchronisation.
 
-Ces améliorations sont expliquées dans le document ci-après : https://blog.couchbase.com/announcing-couchbase-mobile-1-5/
+Ces améliorations sont expliquées dans [le document ci-après](https://blog.couchbase.com/announcing-couchbase-mobile-1-5/).
 
 
 
