@@ -1,7 +1,7 @@
 ---
 layout: default
 author: MDY
-title:  Infrastructure hyperconvergée
+title:  Synchronisation mobile avec Couchbase Sync Gateway
 date:   2018-05-22 06:00:00
 image: /assets/css/images/blog/couchbasesync.jpg
 categories: main
