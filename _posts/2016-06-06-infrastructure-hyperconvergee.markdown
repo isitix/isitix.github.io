@@ -7,7 +7,6 @@ image: /assets/css/images/blog/hyperconverged.jpg
 categories: main
 description: "Elements concernant les infrastructures hyperconvergées"
 ---
-#Hyperconverged infrastructure
 ##Abstract
 Hyperconverged infrastructures promise less configuration work, a lower operating cost, and horizontal scaling capabilities. But they come with their own fallacies and pitfalls, mainly:<!--break-->
 
