@@ -2,7 +2,7 @@
 layout: default
 author: MDY
 title:  VMWare workstation 14 performance issue on Debian 8
-date:   2018-05-28 06:00:00
+date:   2018-05-29 06:00:00
 image: /assets/css/images/blog/workstation.jpg
 categories: main
 description: "VMWare workstation 14.2.1 debian 8.10 performance issue meltdown spectre"
