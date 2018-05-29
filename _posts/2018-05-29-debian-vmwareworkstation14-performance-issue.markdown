@@ -7,7 +7,7 @@ image: /assets/css/images/blog/workstation.jpg
 categories: main
 description: "VMWare workstation 14.2.1 debian 8.10 performance issue meltdown spectre"
 ---
-VMWare published a new version of Workstation Pro 14.1.2 on may the 21st of 2018. As an intensive user of VMWare workstation, I always accept new version, and update as soon as possible. But this version was a great deception. With this new version, my VMs, that usually run smoothly on my PC, consumes all the CPUs. As soon as I fired up a VM, my CPU was loaded at more than 80%. I tried to investigate a bit to understand the problem...
+VMWare published a new version of Workstation Pro 14.1.2 on may the 21st of 2018. As an intensive user of VMWare workstation, I always accept new version, and update as soon as possible. But this version was a great deception. With this new version, my VMs, that usually run smoothly on my PC, consumes all the CPUs. As soon as I fired up a VM, my CPU was loaded at more than 80%. I tried to investigate a bit to understand the problem...<!--break-->
 
 # Hardware configuration
 I worked on a 7 years old laptop but still in the running. I launched a few commands to get my workstation specifications.
@@ -99,7 +99,7 @@ I thought I should upgrade to the last version of Debian (9.x). I didn't make th
 
 I ended up by identifying that the problem occurs as soon as I started up a VM. I decided to rollback to VMWare workstation previous version (14.1.1). The performance issues have gone away with the downgrade.
 
-# Possible root cause
+# Potential root cause
 The root of the problem is probably in VMWare Meltdown/Spectre patching strategy. As mentionned in [the release notes of workstation 14.2.1](https://docs.vmware.com/en/VMware-Workstation-Pro/14/rn/workstation-1412-release-notes.html) on VMWare site:
 
  *This update provides guest access to the SSBD feature in IA32_SPEC_CTRL.  This feature will be provided to all HWv9 or later virtual machines when running on an Intel based platform with the appropriate microcode updates.  Guest operating systems may choose to use this new CPU feature to mitigate CVE-2018-3639. Please see VMware knowledge base article 54951 for more details*.
