@@ -7,16 +7,16 @@ image: /assets/css/images/blog/ftd.jpg
 categories: main
 description: "ASA 5506 migration FTD"
 ---
-Dans [un précédent post](2019-04-02-migration-asa-vers-ftd-p1.markdown), nous vous avons présenté l'architecture FTD et la comparions à ASA with firepower service. Nous donnons, dans ce post, une procédure de migration détaillée.
+Dans [un précédent post](2019-04-02-migration-asa-vers-ftd-p1.html), nous vous avons présenté l'architecture FTD et la comparions à ASA with firepower service. Nous donnons, dans ce post, une procédure de migration détaillée.
 <!--break-->
 
 # Migration de ASA with Firepower Services vers FTD
 
 Sujet abordés :
 
-- [l'architecture firepower](2019-04-02-migration-asa-vers-ftd-p1.markdown)
+- [l'architecture firepower](2019-04-02-migration-asa-vers-ftd-p1.html)
 - la procédure de migration dans ce post
-- [la nouvelle interface web d'administration](2019-04-02-migration-asa-vers-ftd-p3.markdown)
+- [la nouvelle interface web d'administration](2019-04-02-migration-asa-vers-ftd-p3.html)
 
 ## Procédure officielle Cisco
 
@@ -24,7 +24,7 @@ La procédure complète officielle Cisco est [accessible ici](https://www.cisco.
 
 ## Packages d'installation
 
-Il ne faut pas se tromper entre les deux architectures disponibles [décrites dans le post précédent](2019-04-02-migration-asa-vers-ftd-p1.markdown), ASA with firepower services et FTD, qui s'appuient sur deux ensembles de paquets différents :
+Il ne faut pas se tromper entre les deux architectures disponibles [décrites dans le post précédent](2019-04-02-migration-asa-vers-ftd-p1.html), ASA with firepower services et FTD, qui s'appuient sur deux ensembles de paquets différents :
 
 | ASA with firepower services | FTD | Commentaire |
 |-----------------------------|-----|-------------|
@@ -187,6 +187,6 @@ https://<adresse IP de management>/
 
 ## Conclusion
 
-Une fois cette opération réalisée, le 5506 devient un parefeu équipé d'une interface ergonomique que nous présentons dans [le post suivant](2019-04-02-migration-asa-vers-ftd-p3.markdown). 
+Une fois cette opération réalisée, le 5506 devient un parefeu équipé d'une interface ergonomique que nous présentons dans [le post suivant](2019-04-02-migration-asa-vers-ftd-p3.html). 
 
 Pendant la procédure de migration, attention à laisser un temps suffisant pour l'installation des packages, qui est très lente. A défaut, une tentative d'accès en mode renvoie un message troublant (504) alors qu'il suffit d'attendre.

@@ -7,7 +7,7 @@ image: /assets/css/images/blog/ftd.jpg
 categories: main
 description: "ASA 5506 migration FTD"
 ---
-Dans [un précédent post](2018-07-25-configuration-base-asa-5505.markdown), nous vous avons présenté une configuration de base pour l'ancienne plateforme Cisco ASA 5505 en mode routé. Nous revenons sur ce sujet aujourd'hui pour introduire le remplaçant du 5505, le 5506 et vous expliquer comment le migrer d'ASA-OS vers le nouvel OS parefeu Cisco, FTD pour Firepower Threat Defense.
+Dans [un précédent post](2018-07-25-configuration-base-asa-5505.html), nous vous avons présenté une configuration de base pour l'ancienne plateforme Cisco ASA 5505 en mode routé. Nous revenons sur ce sujet aujourd'hui pour introduire le remplaçant du 5505, le 5506 et vous expliquer comment le migrer d'ASA-OS vers le nouvel OS parefeu Cisco, FTD pour Firepower Threat Defense.
 <!--break-->
 
 # L'architecture ASA Firepower
@@ -15,8 +15,8 @@ Dans [un précédent post](2018-07-25-configuration-base-asa-5505.markdown), nou
 Sujet abordés :
 
 - l'architecture firepower (dans ce post)
-- [la procédure de migration](2019-04-02-migration-asa-vers-ftd-p2.markdown)
-- [la nouvelle interface web d'administration](2019-04-02-migration-asa-vers-ftd-p3.markdown)
+- [la procédure de migration](2019-04-02-migration-asa-vers-ftd-p2.html)
+- [la nouvelle interface web d'administration](2019-04-02-migration-asa-vers-ftd-p3.html)
 
 ## Introduction
 
@@ -68,4 +68,4 @@ L'ADSM n'a pas la réputation d'être un logiciel très ergonomique. Il pose des
 | Configuration avancée | ASA CLI | Flex config (un peu compliqué à prendre en main) |
 | Traitement rapide du trafic | Fastpath permet d'éviter l'analyse SNORT | ?? (trust??) |
 
-En conclusion, pour une installation locale de type standalone , en dehors du problème des licences anyconnect qui est un peu problématique pour de l'administration à distance, vous avez tout à gagner à migrer vers FTD. Dans [le prochain post](2019-04-02-migration-asa-vers-ftd-p2.markdown), nous décrivons en détail les étapes de cette migration. Dans le post suivant, nous vous apportons [une présentation](2019-04-02-migration-asa-vers-ftd-p3.markdown) de l'interface web FTD.
+En conclusion, pour une installation locale de type standalone , en dehors du problème des licences anyconnect qui est un peu problématique pour de l'administration à distance, vous avez tout à gagner à migrer vers FTD. Dans [le prochain post](2019-04-02-migration-asa-vers-ftd-p2.html), nous décrivons en détail les étapes de cette migration. Dans le post suivant, nous vous apportons [une présentation](2019-04-02-migration-asa-vers-ftd-p3.html) de l'interface web FTD.
