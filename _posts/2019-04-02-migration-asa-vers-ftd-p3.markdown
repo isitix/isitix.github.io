@@ -7,15 +7,15 @@ image: /assets/css/images/blog/ftd.jpg
 categories: main
 description: "ASA 5506 migration FTD interface Web"
 ---
-Dans [un précédent post](2019-04-02-migration-asa-vers-ftd-p2.html), nous vous avons présenté la procédure de migration de firepower service vers FTD. Nous terminons cette série par un tour d'horizon de l'interface Web, pour vous donner envie de migrer.
+Dans [un précédent post](migration-asa-vers-ftd-p2.html), nous vous avons présenté la procédure de migration de firepower service vers FTD. Nous terminons cette série par un tour d'horizon de l'interface Web, pour vous donner envie de migrer.
 <!--break-->
 
 # Tour d'horizon de l'interface Cisco ASA FTD sur 5506
 
 Sujet abordés :
 
-- [l'architecture firepower](2019-04-02-migration-asa-vers-ftd-p1.html)
-- [la procédure de migration](2019-04-02-migration-asa-vers-ftd-p2.html)
+- [l'architecture firepower](migration-asa-vers-ftd-p1.html)
+- [la procédure de migration](migration-asa-vers-ftd-p2.html)
 - la nouvelle interface web d'administration dans ce post
 
 ## Guide de l'administrateur FTD
@@ -119,5 +119,5 @@ Nous n'avons pas fourni de copies d'écran mais l'interface permet également :
 
 ## Conclusions
 
-Avec FTD, l'ASA 5506 devient un parefeu performant, facile à prendre en main même par des administrateurs n'ayant pas de connaissance en Cisco. L'interface est simple et ergonomique, la partie monitoring est très utile pour avoir une première vue sur les problèmes de sécurité. En version de base, sans les licences complémentaires, vous serez probablement frustrés de ne pas pouvoir accéder aux fonctions remote VPN, filtrage par réputation et filtrage par IDS, le remote VPN étant probablement le plus problématique pour un administrateur à distance de l'équipement. Si vous souhaitez tester, la procédure d'installation est [ici]((2019-04-02-migration-asa-vers-ftd-p2.html)
+Avec FTD, l'ASA 5506 devient un parefeu performant, facile à prendre en main même par des administrateurs n'ayant pas de connaissance en Cisco. L'interface est simple et ergonomique, la partie monitoring est très utile pour avoir une première vue sur les problèmes de sécurité. En version de base, sans les licences complémentaires, vous serez probablement frustrés de ne pas pouvoir accéder aux fonctions remote VPN, filtrage par réputation et filtrage par IDS, le remote VPN étant probablement le plus problématique pour un administrateur à distance de l'équipement. Si vous souhaitez tester, la procédure d'installation est [ici]((migration-asa-vers-ftd-p2.html)
 )
