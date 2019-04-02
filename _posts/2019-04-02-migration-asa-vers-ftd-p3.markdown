@@ -118,7 +118,7 @@ Nous n'avons pas fourni de copies d'écran mais l'interface permet également :
 - de configurer l'accès administration et les utilisateurs administrateurs du parefeu
 - de gérer le déploiement de la configuration (mais pas de gestion de version à proprement parler)
 
-## Conclusions
+## Conclusion
 
 Avec FTD, l'ASA 5506 devient un parefeu performant, facile à prendre en main même par des administrateurs n'ayant pas de connaissance en Cisco. L'interface est simple et ergonomique, la partie monitoring est très utile pour avoir une première vue sur les problèmes de sécurité. En version de base, sans les licences complémentaires, vous serez probablement frustrés de ne pas pouvoir accéder aux fonctions remote VPN, filtrage par réputation et filtrage par IDS, le remote VPN étant probablement le plus problématique pour un administrateur à distance de l'équipement. Si vous souhaitez tester, la procédure d'installation est [ici](migration-asa-vers-ftd-p2.html)
 )
