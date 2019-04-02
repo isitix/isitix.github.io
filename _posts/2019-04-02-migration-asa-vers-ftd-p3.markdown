@@ -42,13 +42,13 @@ Elle comporte de plus deux accès spécifiques :
 - Remote access VPN *qui nécessite une licence*
 - Advanced configuration qui permet d'appliquer des paramètres de configuration qui existaient dans un ASA classique mais ne sont pas encore disponibles en FTD, en les empaquetant dans du JSON (un peu compliqué mais faisable)
 
-![Page d'accueil Cisco FTD](assets/images/pageaccueil.png)
+![Page d'accueil Cisco FTD](/assets/images/pageaccueil.png)
 
 ## Policy
 
 La partie policy définit les règles de filtage de manière simple en fonction du parcours des paquets dans le système. Nous avons tronqué la copie d'écran par sécurité :
 
-![Gestion des règles de filtrage FTD](assets/images/filtrage.png)
+![Gestion des règles de filtrage FTD](/assets/images/filtrage.png)
 
 Nous voyons que s'enchaîne les étapes suivantes : 
 
@@ -68,45 +68,46 @@ Le trafic étant chiffré à plus de 70%, il est possible de déchiffrer pour ap
 - Interaction à bien organiser entre le filtrage avec ou sans déchiffrement
 - Incompatible avec certaines applications, mobiles notamment
 
-![Déchiffrement SSL sur Cisco FTD](assets/images/dechiffrementssl.png)
+![Déchiffrement SSL sur Cisco FTD](/assets/images/dechiffrementssl.png)
 
 ### Authentification des utilisateurs
 
 Il est possible de s'interfacer avec un annuaire, notammenet Active Directory, mais également d'activer un portail captif permettant aux utilisateurs de s'authentifier, ce qui peut être une option intéressante pour protéger certains flux. Nous n'avons pas activé cette fonctionnalité, pourtant comprise dans la licence de base, ici :
 
-![Authentification sur Cisco FTD](assets/images/authentification.png)
+![Authentification sur Cisco FTD](/assets/images/authentification.png)
 
 
 ### Security intelligence
 
 Le module Security intelligence permet d'interroger une base Cisco pour ajouter des règles s'appuyant sur la réputation des domaines, des adresses IP et des URLs. Ce module est intéressant mais nécessite une licence supplémentaire :
 
-![security policy Cisco FTD](assets/images/securityintelligence.png)
+![security policy Cisco FTD](/assets/images/securityintelligence.png)
 
 ### NAT
 
 Le module NAT nous permet de définir des règles NAT équivalentes à celles existants sur un ASA classique (auto-nat, static nat, dynamic nat) mais à travers une interface plus conviviale
 
-![nat Cisco FTD](assets/images/nat.png)
+![nat Cisco FTD](/assets/images/nat.png)
 
 ### ACL
 
 Le module ACL permet de définir les règles de filtrage des flux et les actions à entreprendre. Les fonctions liées à security intelligence ou intrusion detection ne sont pas disponibles. Il est cependant possible, par exemple, de faire du filtrage par zone géographique, par application - le moteur de classement des applications ne nécessite pas de licence supplémentaire - et par URL. 
 
-![ACL sur Cisco FTD](assets/images/acl.png)
+![ACL sur Cisco FTD](/assets/images/acl.png)
 
 ### Intrusion detection
 
 La partie intrusion detection permet de définir et d'adpater les règles SNORT d'analyse du trafic. Pour être actif, la politique d'intrusion doit être déployée dans la partie Access Control, ce qui nécessite une licence supplémentaire par rapport à la licence de base.
 
-![intrusion detection Cisco FTD](assets/images/intrusion.png)
+![intrusion detection Cisco FTD](/assets/images/intrusion.png)
+
 
 
 ## Monitoring
 
 Enfin, le parefeu des tableaux de bord et une interface de requête permettant de visualiser et d'analyser les logs locaux. Le volume de logs est évidemment limité mais suffisant pour avoir une vision d'ensemble du fonctionnement du parefeu et réaliser du troubleshooting. Les informations entrant dans le monitoring dépendent de la configuration définie pour les logs et des licences activées sur le parefeu
 
-![monitoring Cisco FTD](assets/images/monitoring.png)
+![monitoring Cisco FTD](/assets/images/monitoring.png)
 
 ## Autres fonctions
 

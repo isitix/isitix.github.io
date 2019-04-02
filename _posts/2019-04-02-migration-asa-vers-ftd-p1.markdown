@@ -45,7 +45,7 @@ Enfin, la partie chiffrement a été mise à jour par rapport à l'ASA 5505 où 
 
 Il y a 5 ans, Cisco a racheté l'IDS/IPS (Intrusion Detection/Protection System) [SNORT](https://www.snort.org) et décidait de l'intégrer à sa gamme de parefeu, en remplacement d'un IDS interne qui tournait déjà sur la série ASA-X. En découle la gammme NG  à laquelle appartient le 5506.
 
-![Firepower service versus Firepower threat defense](assets/images/ftdarchitecture.png)
+![Firepower service versus Firepower threat defense](/assets/images/ftdarchitecture.png)
 
 ### Firepower service
 
