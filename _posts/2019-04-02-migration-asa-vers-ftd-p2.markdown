@@ -3,7 +3,7 @@ layout: default
 author: MDY
 title:  Migration d'un Cisco ASA 5506 de ASA-OS vers FTD, partie 2
 date:   2019-04-02 11:00:00
-image: /assets/css/images/blog/ftd.jpg
+image: /assets/css/images/blog/ftdp2.jpg
 categories: main
 description: "ASA 5506 migration FTD"
 ---
