@@ -1,6 +1,6 @@
 ---
 layout: default
-author: MDY
+author: MDY (blog@isitix.com)
 title:  Une base de configuration pour firewall Cisco ASA 5505
 date:   2018-07-25 06:00:00
 image: /assets/css/images/blog/firewall.jpg

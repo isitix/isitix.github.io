@@ -1,6 +1,6 @@
 ---
 layout: default
-author: MDY
+author: MDY (blog@isitix.com)
 title:  Migration d'un Cisco ASA 5506 de ASA-OS vers FTD, partie 1
 date:   2019-04-02 11:00:00
 image: /assets/css/images/blog/ftd.jpg
@@ -59,12 +59,12 @@ La plateforme ainsi constituée, dénommée ASA with firepower service, empile d
 
 Cisco a ensuite redéveloppé un OS de parefeu intégrant SNORT et les fonctions de l'ASA. Ce nouvel OS s'appelle FTD, Firepower Threat Defense.
 
-L'ADSM n'a pas la réputation d'être un logiciel très ergonomique. Il pose des problèmes de compatibilité avec Java. L'interface est lente, complexe. Pour un parefeu en mode standalone, et en particulier un 5506, destiné à une petite structure, l'installation d'un serveur FMC ne se justifie cependant pas vraiment. Il devient donc intéressant de migrer vers FTD et son interface full web. Cependant, cette migration apporte son lot de changement et de restriction que nous indiquons dans le tableau ci-après :
+L'ADSM n'a pas la réputation d'être un logiciel très ergonomique. Il pose des problèmes de compatibilité avec Java. L'interface est lente, complexe. Pour un parefeu en mode standalone, et en particulier un 5506, destiné à une petite structure, l'installation d'un serveur FMC ne se justifie cependant pas vraiment. Il devient donc intéressant de migrer vers FTD et son interface full web Firepower Device Manager (FDM). Cependant, cette migration apporte son lot de changement et de restriction que nous indiquons dans le tableau ci-après :
 
 | Domaine | ASA with Firepower Service | FTD |
 |---------|----------------------------|-------|
 | Licences VPN | Deux licences anyconnect compris dans la licence de base | Pas de licence Anyconnect |
-| Configuration de base | Configuration ASA classique comme sur un 5505 + configuration du module Firepower via ASDM ou FMC | Interface Web plutôt agréable, Cisco Defense Orchestrator à partir de la version 6.4 |
+| Configuration de base | Configuration ASA classique comme sur un 5505 + configuration du module Firepower via ASDM ou FMC | Interface Web FDM plutôt agréable, Cisco Defense Orchestrator à partir de la version 6.4 |
 | Configuration avancée | ASA CLI | Flex config (un peu compliqué à prendre en main) |
 | Traitement rapide du trafic | Fastpath permet d'éviter l'analyse SNORT | ?? (trust??) |
 

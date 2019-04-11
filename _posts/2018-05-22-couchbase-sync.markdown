@@ -1,6 +1,6 @@
 ---
 layout: default
-author: MDY
+author: MDY (blog@isitix.com)
 title:  Synchronisation mobile avec Couchbase Sync Gateway
 date:   2018-05-22 06:00:00
 image: /assets/css/images/blog/couchbasesync.jpg
@@ -9,15 +9,14 @@ description: "Complexité de synchronisation de documents Couchbase Mobile 1.4 :
 ---
 # La synchronisation des documents Couchbase Mobile avec la Sync Gateway V1.4 et son évolution en V1.5
 ## Introduction
-La synchronisation des données d'une base Couchbase Mobile vers une base Couchbase centrale est un mécanisme simple à mettre en place, au moyen de la sync gateway, mais complexe à appréhendre du fait des mécanismes sous-jacents et de leur implantation dans l'architecture Couchbase.
+La synchronisation des données d'une base Couchbase Mobile vers une base Couchbase centrale est un mécanisme simple à mettre en place, au moyen de la sync gateway, mais complexe à appréhender du fait des mécanismes sous-jacents et de leur implantation dans l'architecture Couchbase.<!--break-->
 
-Ce document cite et réordonne des informations présentées sur le site [Couchbase](https://developer.couchbase.com/). Il apporte une vue synthétique sur les mécanismes de synchronisation de Couchbase Mobile et permet de mieux comprendre certains comportements inattendus qui peuvent surprendre le développeur d'applications mobiles s'appuyant sur Couchbase Sync Gateway, des champs ajoutés, la présence apparente de doublons dans les bases, etc...<!--break-->
+Ce document cite et réordonne des informations présentées sur le site [Couchbase](https://developer.couchbase.com/). Il apporte une vue synthétique sur les mécanismes de synchronisation de Couchbase Mobile et permet de mieux comprendre certains comportements inattendus qui peuvent surprendre le développeur d'applications mobiles s'appuyant sur Couchbase Sync Gateway, des champs ajoutés, la présence apparente de doublons dans les bases, etc...
 
 ## Champs spécifiques à la gestion des révisions 
 Les documents comportent des champs précédés par un \"\_\". Ces champs sont des champs techniques réservés pour le bon fonctionnement de la SyncGateway. Ces champs sont utilisés pour gérer les révisions et construire l'arbre de révision : 
 
 > properties with a leading underscore (_ is the character to denote properties reserved for Couchbase) are kept to construct the revision tree.
-
 
 ## Le champ \_rev
 Pour le bon fonctionnement du système, tout document doit comporter un numéro de révision :

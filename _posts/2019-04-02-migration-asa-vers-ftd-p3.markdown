@@ -1,6 +1,6 @@
 ---
 layout: default
-author: MDY
+author: MDY (blog@isitix.com)
 title:  Migration d'un Cisco ASA 5506 de ASA-OS vers FTD, partie 3
 date:   2019-04-02 11:00:00
 image: /assets/css/images/blog/ftdp3.jpg
@@ -10,7 +10,7 @@ description: "ASA 5506 migration FTD interface Web"
 Dans [un précédent post](migration-asa-vers-ftd-p2.html), nous vous avons présenté la procédure de migration de firepower service vers FTD. Nous terminons cette série par un tour d'horizon de l'interface Web, pour vous donner envie de migrer.
 <!--break-->
 
-# Tour d'horizon de l'interface Cisco ASA FTD sur 5506
+# Tour d'horizon de l'interface Cisco ASA FTD sur 5506, Firepower Device Manager (FDM)
 
 Sujet abordés :
 
